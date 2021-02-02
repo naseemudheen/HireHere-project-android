@@ -19,15 +19,17 @@
     <td>post</td>
     <td>pin</td>
   </tr>
+  {% for i in val %}
   <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td><p><a href="#">Accept</a></p>
-    <p><a href="#">Reject</a></p></td>
+    <td>{{i[1]}}</td>
+    <td>{{i[2]}}</td>
+    <td>{{i[3]}}</td>
+    <td>{{i[4]}}</td>
+    <td>{{i[5]}}</td>
+    <td><p><a href="{{url_for('accept_employer',id=i[6])}}">Accept</a></p>
+    <p><a href="{{url_for('reject_employer',id=i[6])}}">Reject</a></p></td>
   </tr>
+  {% endfor %}
 </table>
 </form>
 </body>
