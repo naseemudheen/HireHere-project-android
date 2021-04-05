@@ -7,27 +7,27 @@
 
 <body>
 
-<form id="form1" name="form1" method="post" action="/add_job">
+<form id="form1" name="form1" method="post" action="/update_job">
 <table width="263" border="0">
   <tr>
-    <td>Job</td>
-    <td><input type="text" name="textfield"  required pattern="[A-Z a-z]{2,25}" /></td>
+    <td>Job Name</td>
+    <td><input type="text" name="textfield" value="{{val[1]}}" required pattern="[A-Z a-z]{2,25}"/></td>
   </tr>
   <tr>
     <td>Salary</td>
-    <td><input type="text" name="textfield3" required pattern="[0-9]" /></td>
+    <td><input type="text" name="textfield3" value="{{val[3]}}" required pattern="[0-9]"/></td>
   </tr>
   <tr>
     <td>Place</td>
-    <td><input type="text" name="textfield4" required pattern="[A-Z a-z]{2,25}" /></td>
+    <td><input type="text" name="textfield4" value="{{val[4]}}" required pattern="[A-Z a-z]{2,25}"/></td>
   </tr>
   <tr>
     <td>Contact No </td>
-    <td><input type="text" name="textfield5" required pattern="[6789][0-9]{9}"/></td>
+    <td><input type="text" name="textfield5" value="{{val[5]}}" required pattern="[6789][0-9]{9}"/></td>
   </tr>
   <tr>
     <td colspan="2"><div align="center">
-      <input type="submit" name="Submit" value="Add" />
+      <input type="submit" name="Update" value="Update" />
     </div></td>
   </tr>
 </table>

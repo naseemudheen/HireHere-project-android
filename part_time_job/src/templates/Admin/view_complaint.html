@@ -6,21 +6,46 @@
 </head>
 
 <body>
-<form id="form1" name="form1" method="post" action="">
-<table width="200" border="1">
+<form id="form1" name="form1" method="post" action="/view_admin_complaint">
+  <p>
+    <label></label>
+  </p>
+  <table width="200" border="0">
+    <tr>
+      <td>select</td>
+      <td><div align="center">
+        <select name="select">
+          <option value="jobseeker">jobseeker</option>
+          <option value="employer">employer</option>
+        </select>
+      </div></td>
+    </tr>
+    <tr>
+      <td colspan="2"><div align="center">
+        <input type="submit" name="Submit" value="search" />
+      </div></td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+  <table width="200" border="1">
   <tr>
     <th scope="col">Complaint</th>
     <th scope="col">Name</th>
     <th scope="col">Date</th>
-    <th scope="col">&nbsp;</th>
+    <th scope="col">Reply</th>
+    <th scope="col"></th>
   </tr>
+    {% for i in val %}
   <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td><p><a href="reply_complaint_admin">Reply</a></p>
-    <p><a href="#">Delete</a></p></td>
+    <td>{{i[2]}}</td>
+    <td>{{i[0]}}</td>
+    <td>{{i[3]}}</td>
+    <td>{{i[4]}}</td>
+    <td><p><a href="{{url_for('delete_complaint',id=i[1])}}">Delete</a></p>
+      <p><a href="{{url_for('reply_complaint_admin',id=i[1])}}">Reply</a></p>
+    </td>
   </tr>
+      {% endfor %}
 </table>
 </form>
 <p>&nbsp;</p>

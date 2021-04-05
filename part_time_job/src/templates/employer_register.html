@@ -6,39 +6,39 @@
 </head>
 
 <body>
-<form id="form1" name="form1" method="post" action="">
+<form id="form1" name="form1" method="post" action="/add_employer">
   <table width="200" border="0">
     <tr>
       <td>Company</td>
-      <td><input type="text" name="textfield" /></td>
+      <td><input type="text" name="textfield" required pattern="{2,45}"/></td>
     </tr>
     <tr>
       <td>Username</td>
       <td><label>
-        <input type="text" name="textfield6" />
+        <input type="text" name="textfield6" required pattern="{4,25}" />
       </label></td>
     </tr>
     <tr>
       <td>Password</td>
       <td><label>
-        <input type="text" name="textfield7" />
+        <input type="password" name="textfield7" required pattern="{8,25}"/>
       </label></td>
     </tr>
     <tr>
       <td>Place</td>
-      <td><input type="text" name="textfield2" /></td>
+      <td><input type="text" name="textfield2" required pattern="[A-Z a-z]{2,25}"/></td>
     </tr>
     <tr>
       <td>Post</td>
-      <td><input type="text" name="textfield3" /></td>
+      <td><input type="text" name="textfield3" required pattern="[A-Z a-z]{2,25}"/></td>
     </tr>
     <tr>
       <td>pin</td>
-      <td><input type="text" name="textfield4" /></td>
+      <td><input type="text" name="textfield4" required pattern="[0-9]{6}"/></td>
     </tr>
     <tr>
       <td>Contact</td>
-      <td><input type="text" name="textfield5" /></td>
+      <td><input type="text" name="textfield5" required pattern="[6789][0-9]{9}"/></td>
     </tr>
     <tr>
       <td colspan="2"><div align="center">
