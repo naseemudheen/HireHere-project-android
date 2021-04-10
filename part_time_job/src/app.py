@@ -21,7 +21,7 @@ def login():
         return "<script> alert('invalid username or password')</script>"
     else:
         if res[3]=='admin':
-            return '''<script>alert('login succesfull admin');window.location='/admin_home' </script>'''
+            return '''<script>window.location='/admin_home' </script>'''
         elif res[3]=='employer':
             session['lid']=res[0]
             return '''<script>window.location='/employer_home' </script>'''
