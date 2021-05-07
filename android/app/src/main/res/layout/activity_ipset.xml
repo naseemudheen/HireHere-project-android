@@ -16,10 +16,10 @@
             android:layout_height="match_parent" >
 
             <TextView
-                android:id="@+id/textView25"
+                android:id="@+id/Textview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="IP adress" />
         </TableRow>
 
         <TableRow
@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="Name" />
+                android:text="http://192.168.1.9" />
         </TableRow>
 
         <TableRow

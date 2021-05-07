@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,43 +8,51 @@
     tools:context=".feedbacksend">
 
     <TableLayout
+        android:id="@+id/tableLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView27"
+                android:id="@+id/textView28"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="feedback" />
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Message" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <EditText
                 android:id="@+id/editTextTextMultiLine3"
-                android:layout_width="390dp"
-                android:layout_height="90dp"
+                android:layout_width="match_parent"
+                android:layout_height="247dp"
+                android:layout_weight="1"
                 android:ems="10"
                 android:gravity="start|top"
+                android:hint="Feedback"
                 android:inputType="textMultiLine" />
-        </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <Button
-                android:id="@+id/button12"
-                android:layout_width="242dp"
-                android:layout_height="wrap_content"
-                android:text="Send" />
         </TableRow>
 
     </TableLayout>
-</LinearLayout>
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="399dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="380dp"
+        android:text="SEND FEEDBACK"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
